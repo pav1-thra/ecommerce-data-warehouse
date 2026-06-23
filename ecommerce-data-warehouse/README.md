@@ -1,194 +1,134 @@
-\# End-to-End E-Commerce Data Warehouse and Analytics Platform
+# End-to-End E-Commerce Data Warehouse and Analytics Platform
 
+## Overview
 
+This project demonstrates the design and implementation of an End-to-End E-Commerce Data Warehouse and Analytics Platform using Python, PostgreSQL, SQLAlchemy, SQL, and Power BI.
 
-\## Project Overview
+The solution follows a complete data engineering workflow from raw data ingestion to analytical reporting through a dimensional data warehouse and interactive dashboard.
 
+## Tech Stack
 
+* Python
+* Pandas
+* PostgreSQL
+* SQLAlchemy
+* SQL
+* Power BI
+* Git & GitHub
 
-This project demonstrates the design and implementation of an end-to-end E-Commerce Data Warehouse and Analytics Platform using Python, PostgreSQL, SQL, and Power BI.
+## Architecture
 
+Raw CSV Files → ETL Pipeline → PostgreSQL Data Warehouse → Star Schema → Power BI Dashboard
 
+## Data Model
 
-The project follows a complete data engineering workflow:
+### Dimension Tables
 
+* dim_customer
+* dim_product
+* dim_payment
+* dim_date
 
+### Fact Table
 
-Raw Data → ETL Pipeline → Data Warehouse → Analytics → Dashboarding
+* fact_sales
 
+## ETL Process
 
+### Extract
 
-\## Tech Stack
+* Read source CSV files using Pandas
 
+### Transform
 
+* Clean and standardize customer and transaction data
 
-\* Python
+### Load
 
-\* Pandas
+* Load transformed data into PostgreSQL warehouse tables
 
-\* PostgreSQL
+## Dashboard Features
 
-\* SQLAlchemy
+### KPI Cards
 
-\* SQL
+* Total Revenue
+* Total Orders
+* Total Customers
 
-\* Power BI
+### Visualizations
 
-\* Git \& GitHub
+* Revenue by Product
+* Revenue by Customer
+* Revenue by Payment Method
+* Revenue Trend Analysis
 
+### Filters
 
+* Payment Method Slicer
 
-\## Project Scope
+## Key Metrics
 
+| Metric          | Value   |
+| --------------- | ------- |
+| Total Revenue   | 151.50K |
+| Total Orders    | 4       |
+| Total Customers | 4       |
 
+## Dashboard Screenshots
 
-\### Included
+### Complete Dashboard
 
+![Dashboard](screenshots/dashboard_full.png)
 
+### Revenue by Product
 
-\* Customers
+![Revenue by Product](screenshots/revenue_product.png)
 
-\* Products
+### Revenue Trend
 
-\* Orders
+![Revenue Trend](screenshots/revenue_trend.png)
 
-\* Payments
+## Project Structure
 
+ecommerce-data-warehouse/
 
+├── dashboards/
 
-\### Excluded
+├── data/
 
+├── docs/
 
+├── etl/
 
-\* Machine Learning
+├── screenshots/
 
-\* Airflow
+├── sql/
 
-\* Docker
+├── README.md
 
-\* Cloud Services
+└── requirements.txt
 
-\* Shipping
+## How to Run
 
-\* Inventory Management
+1. Clone the repository
+2. Install dependencies
 
-\* Role-Based Access Control
+pip install -r requirements.txt
 
+3. Configure PostgreSQL
+4. Run ETL pipeline
+5. Connect Power BI to warehouse tables
 
+## Business Insights
 
-\## Data Warehouse Design
+* Identified revenue contribution by product category
+* Analyzed customer-level revenue performance
+* Compared payment method usage and revenue impact
+* Monitored sales trends over time
 
+## Future Enhancements
 
-
-\### Dimension Tables
-
-
-
-\* dim\_customer
-
-\* dim\_product
-
-\* dim\_payment
-
-\* dim\_date
-
-
-
-\### Fact Table
-
-
-
-\* fact\_sales
-
-
-
-\## ETL Workflow
-
-
-
-1\. Extract data from source CSV files
-
-2\. Transform and clean data using Pandas
-
-3\. Load data into PostgreSQL
-
-4\. Build Star Schema warehouse tables
-
-5\. Perform analytical queries
-
-6\. Visualize insights using Power BI
-
-
-
-\## Dashboard Features
-
-
-
-\* Total Revenue KPI
-
-\* Total Orders KPI
-
-\* Total Customers KPI
-
-\* Revenue by Product
-
-\* Revenue by Customer
-
-\* Revenue by Payment Method
-
-\* Revenue Trend Analysis
-
-\* Interactive Payment Method Filter
-
-
-
-\## Key Metrics
-
-
-
-\* Total Revenue: 151.50K
-
-\* Total Orders: 4
-
-\* Total Customers: 4
-
-
-
-\## Project Structure
-
-
-
-```text
-
-ecommerce-data-warehouse
-
-├── data
-
-├── etl
-
-├── sql
-
-├── dashboards
-
-├── docs
-
-└── README.md
-
-```
-
-
-
-\## Future Enhancements
-
-
-
-\* Larger datasets
-
-\* Automated scheduling
-
-\* Additional business KPIs
-
-\* Advanced reporting dashboards
-
-
-
+* Larger datasets
+* Automated scheduling
+* Additional KPIs
+* Advanced dashboards

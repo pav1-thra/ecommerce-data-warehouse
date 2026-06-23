@@ -1,0 +1,5 @@
+order_id,customer_id,product_id,order_date,quantity
+1,1,1,2026-06-10,1
+2,2,2,2026-06-11,2
+3,3,3,2026-06-12,1
+4,4,4,2026-06-13,3

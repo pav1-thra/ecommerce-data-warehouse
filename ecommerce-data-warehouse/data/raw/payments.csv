@@ -1,0 +1,5 @@
+payment_id,order_id,amount,payment_method
+1,1,65000,Credit Card
+2,2,60000,UPI
+3,3,2500,Debit Card
+4,4,24000,Net Banking
